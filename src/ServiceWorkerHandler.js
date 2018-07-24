@@ -19,7 +19,7 @@ export default class ServiceWorkerHandler {
         // check if web worker was already installed
         if (!serviceWorker.controller) {
             // if not, register web worker
-            return serviceWorker.register('/sw.js', {
+            return serviceWorker.register('sw.js', {
                 scope: './',
             }).then(() => {
                 return serviceWorker.ready;
