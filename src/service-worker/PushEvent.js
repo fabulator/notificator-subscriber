@@ -10,7 +10,7 @@ export default class PushEvent {
         if (this.event.data) {
             const data = this.getNotificationFromEvent();
             if (data) {
-                return new Promise(resolve => [resolve(data)]);
+                return new Promise(resolve => resolve([data]));
             }
         }
 
